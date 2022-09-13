@@ -24,18 +24,18 @@ const Home = () => {
               <table>
                <thead>
                   <tr>
-                    { header.map((header, headerIdx) => {
-                      return <th key={headerIdx}>{header}</th>
+                    { header.map((header, index) => {
+                      return <th key={index}>{header}</th>
                     })}
                   </tr>
                 </thead>
                 <tbody>
-                  { Object.keys(data).map((key, keyIdx) => (
-                      <tr key={keyIdx}>
-                        <td>{key}</td>
-                        <td>{(1.05 * data[key]).toFixed(4)}</td>
-                        <td>{(1.0 * data[key]).toFixed(4)}</td>
-                        <td>{(0.95 * data[key]).toFixed(4)}</td>
+                  { Object.keys(data).map((item, index) => (
+                      <tr key={index}>
+                        <td>{item}</td>
+                        <td>{(1.05 * data[item]).toFixed(4)}</td>
+                        <td>{(1.0 * data[item]).toFixed(4)}</td>
+                        <td>{(0.95 * data[item]).toFixed(4)}</td>
                       </tr>
                   ))}
                 </tbody>
